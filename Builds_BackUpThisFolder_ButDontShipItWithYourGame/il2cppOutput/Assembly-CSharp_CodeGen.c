@@ -1,0 +1,84 @@
+﻿#include "pch-c.h"
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void BackButtonBehaviour_Start_m2537440A39553C8D4D3F4F78E6B112D63C2A1BF6 (void);
+extern void BackButtonBehaviour_Update_mBF5568ABC07F1E14ABD9D8DA8F4B40F1881D9A99 (void);
+extern void BackButtonBehaviour_OnBackButtonClick_mEC73EE4B5CE36001765526E66FBE62A02530E722 (void);
+extern void BackButtonBehaviour__ctor_m46F263308ED34CD9B15AA916F7C1E641DB5F601F (void);
+extern void NextButtonBehaviour_Start_mB026F48FEDB389483BB106049403C86612A7EAD2 (void);
+extern void NextButtonBehaviour_Update_m94DAB8A2BF378EAE2BF971DFA961CF5184DF57B1 (void);
+extern void NextButtonBehaviour_OnNextButtonClick_mDC9A526895803F89E36C49053852996A3DA59725 (void);
+extern void NextButtonBehaviour__ctor_m4710FCBE018202E18A19A023FFA3E362026BBA02 (void);
+extern void ResetButtonBehaviour_Start_m34C479C18D9B74FBBCDC6842295C454E32EF5BE7 (void);
+extern void ResetButtonBehaviour_Update_mA05A128B5C6B658B5C4CE6B6B3EB9AD460F7D97D (void);
+extern void ResetButtonBehaviour_OnResetButtonClick_mAFFF29ABA75AAE5F3382E446E632E4472918E6C6 (void);
+extern void ResetButtonBehaviour__ctor_m7B6FEF78CE2E0A35ACFC3360B17004D0F1E413D2 (void);
+extern void StartButtonBehaviour_Start_m7E176D91862C7E3E8D4F8AEAD9DC8565B099BE4C (void);
+extern void StartButtonBehaviour_Update_m23D574B9C8D573CF00CCE9F43F6D248C300E4113 (void);
+extern void StartButtonBehaviour_OnStartButtonClick_mF5FD4E73FC3F1EC56F4C8760288FC299BA800ABF (void);
+extern void StartButtonBehaviour__ctor_mA533C7E0DA7F3DEF84004BCF2A30EEF81523807C (void);
+static Il2CppMethodPointer s_methodPointers[16] = 
+{
+	BackButtonBehaviour_Start_m2537440A39553C8D4D3F4F78E6B112D63C2A1BF6,
+	BackButtonBehaviour_Update_mBF5568ABC07F1E14ABD9D8DA8F4B40F1881D9A99,
+	BackButtonBehaviour_OnBackButtonClick_mEC73EE4B5CE36001765526E66FBE62A02530E722,
+	BackButtonBehaviour__ctor_m46F263308ED34CD9B15AA916F7C1E641DB5F601F,
+	NextButtonBehaviour_Start_mB026F48FEDB389483BB106049403C86612A7EAD2,
+	NextButtonBehaviour_Update_m94DAB8A2BF378EAE2BF971DFA961CF5184DF57B1,
+	NextButtonBehaviour_OnNextButtonClick_mDC9A526895803F89E36C49053852996A3DA59725,
+	NextButtonBehaviour__ctor_m4710FCBE018202E18A19A023FFA3E362026BBA02,
+	ResetButtonBehaviour_Start_m34C479C18D9B74FBBCDC6842295C454E32EF5BE7,
+	ResetButtonBehaviour_Update_mA05A128B5C6B658B5C4CE6B6B3EB9AD460F7D97D,
+	ResetButtonBehaviour_OnResetButtonClick_mAFFF29ABA75AAE5F3382E446E632E4472918E6C6,
+	ResetButtonBehaviour__ctor_m7B6FEF78CE2E0A35ACFC3360B17004D0F1E413D2,
+	StartButtonBehaviour_Start_m7E176D91862C7E3E8D4F8AEAD9DC8565B099BE4C,
+	StartButtonBehaviour_Update_m23D574B9C8D573CF00CCE9F43F6D248C300E4113,
+	StartButtonBehaviour_OnStartButtonClick_mF5FD4E73FC3F1EC56F4C8760288FC299BA800ABF,
+	StartButtonBehaviour__ctor_mA533C7E0DA7F3DEF84004BCF2A30EEF81523807C,
+};
+static const int32_t s_InvokerIndices[16] = 
+{
+	10883,
+	10883,
+	10883,
+	10883,
+	10883,
+	10883,
+	10883,
+	10883,
+	10883,
+	10883,
+	10883,
+	10883,
+	10883,
+	10883,
+	10883,
+	10883,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
+{
+	"Assembly-CSharp.dll",
+	16,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
