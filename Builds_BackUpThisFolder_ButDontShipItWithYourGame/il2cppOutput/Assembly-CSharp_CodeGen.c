@@ -11,6 +11,9 @@ extern void BackButtonBehaviour_Start_m2537440A39553C8D4D3F4F78E6B112D63C2A1BF6 
 extern void BackButtonBehaviour_Update_mBF5568ABC07F1E14ABD9D8DA8F4B40F1881D9A99 (void);
 extern void BackButtonBehaviour_OnBackButtonClick_mEC73EE4B5CE36001765526E66FBE62A02530E722 (void);
 extern void BackButtonBehaviour__ctor_m46F263308ED34CD9B15AA916F7C1E641DB5F601F (void);
+extern void GameController_Start_mD0C79B8B5B5D8EDC88F7F2F88B5954B1342198EF (void);
+extern void GameController_Update_m5E36D1D6999A7510DFDFBF6805CF9E9CB50F0962 (void);
+extern void GameController__ctor_mB6369F6C5357D5984325D613D589EDA60818CBE9 (void);
 extern void NextButtonBehaviour_Start_mB026F48FEDB389483BB106049403C86612A7EAD2 (void);
 extern void NextButtonBehaviour_Update_m94DAB8A2BF378EAE2BF971DFA961CF5184DF57B1 (void);
 extern void NextButtonBehaviour_OnNextButtonClick_mDC9A526895803F89E36C49053852996A3DA59725 (void);
@@ -23,12 +26,15 @@ extern void StartButtonBehaviour_Start_m7E176D91862C7E3E8D4F8AEAD9DC8565B099BE4C
 extern void StartButtonBehaviour_Update_m23D574B9C8D573CF00CCE9F43F6D248C300E4113 (void);
 extern void StartButtonBehaviour_OnStartButtonClick_mF5FD4E73FC3F1EC56F4C8760288FC299BA800ABF (void);
 extern void StartButtonBehaviour__ctor_mA533C7E0DA7F3DEF84004BCF2A30EEF81523807C (void);
-static Il2CppMethodPointer s_methodPointers[16] = 
+static Il2CppMethodPointer s_methodPointers[19] = 
 {
 	BackButtonBehaviour_Start_m2537440A39553C8D4D3F4F78E6B112D63C2A1BF6,
 	BackButtonBehaviour_Update_mBF5568ABC07F1E14ABD9D8DA8F4B40F1881D9A99,
 	BackButtonBehaviour_OnBackButtonClick_mEC73EE4B5CE36001765526E66FBE62A02530E722,
 	BackButtonBehaviour__ctor_m46F263308ED34CD9B15AA916F7C1E641DB5F601F,
+	GameController_Start_mD0C79B8B5B5D8EDC88F7F2F88B5954B1342198EF,
+	GameController_Update_m5E36D1D6999A7510DFDFBF6805CF9E9CB50F0962,
+	GameController__ctor_mB6369F6C5357D5984325D613D589EDA60818CBE9,
 	NextButtonBehaviour_Start_mB026F48FEDB389483BB106049403C86612A7EAD2,
 	NextButtonBehaviour_Update_m94DAB8A2BF378EAE2BF971DFA961CF5184DF57B1,
 	NextButtonBehaviour_OnNextButtonClick_mDC9A526895803F89E36C49053852996A3DA59725,
@@ -42,8 +48,11 @@ static Il2CppMethodPointer s_methodPointers[16] =
 	StartButtonBehaviour_OnStartButtonClick_mF5FD4E73FC3F1EC56F4C8760288FC299BA800ABF,
 	StartButtonBehaviour__ctor_mA533C7E0DA7F3DEF84004BCF2A30EEF81523807C,
 };
-static const int32_t s_InvokerIndices[16] = 
+static const int32_t s_InvokerIndices[19] = 
 {
+	10883,
+	10883,
+	10883,
 	10883,
 	10883,
 	10883,
@@ -65,7 +74,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	16,
+	19,
 	s_methodPointers,
 	0,
 	NULL,
