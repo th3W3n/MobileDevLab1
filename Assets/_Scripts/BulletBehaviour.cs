@@ -1,13 +1,11 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class BulletBehaviour : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    [SerializeField] private Vector3 velocity;
     [SerializeField] private Boundary bulletBounds;
-    private BulletManager bulletManager;
+    [SerializeField] private BulletType type;
 
-    private void Start() => bulletManager = FindAnyObjectByType<BulletManager>();
     private void Update()
     {
         Move();
@@ -16,21 +14,30 @@ public class BulletBehaviour : MonoBehaviour
 
     private void Move()
     {
-        transform.position -= new Vector3(0f, speed, 0f) * Time.deltaTime;
+        transform.position += velocity * Time.deltaTime;
     }
     private void CheckBounds()
     {
-        if (transform.position.y < bulletBounds.min)
-            bulletManager.ReturnBullet(gameObject);
+        if (transform.position.y < bulletBounds.min && type == BulletType.Enemy)
+            BulletManager.Instance.ReturnBullet(gameObject, type);
+        else if (transform.position.y > bulletBounds.max && type == BulletType.Player)
+            BulletManager.Instance.ReturnBullet(gameObject, type);
     }
 
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player"))
+        if (col.CompareTag("Player") && type == BulletType.Enemy)
         {
-            bulletManager.ReturnBullet(gameObject);
-            SceneManager.LoadScene("End");
+            BulletManager.Instance.ReturnBullet(gameObject, type);
+            var player = col.GetComponent<PlayerController>();
+            player.TakeHit();
+        }
+        if (col.CompareTag("Enemy") && type == BulletType.Player)
+        {
+            BulletManager.Instance.ReturnBullet(gameObject, type);
+            var enemy = col.GetComponent<EnemyBehaviour>();
+            enemy.TakeHit();
         }
     }
 }

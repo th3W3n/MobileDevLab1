@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2881202957582109628}
   - component: {fileID: 8187171754523649295}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: PlayerBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.9137106, b: 0.033018887, a: 1}
+  m_Color: {r: 0, g: 0.08572543, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -106,10 +106,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba84169a46063c40a514366978fe0c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletBehaviour
-  speed: 2
+  velocity: {x: 0, y: 5, z: 0}
   bulletBounds:
     min: -5.2
     max: 5.2
+  type: 1
+  gc: {fileID: 5528432412425697422, guid: 10db26cd2aede314d850e9e3566f3f35, type: 3}
 --- !u!58 &8187171754523649295
 CircleCollider2D:
   m_ObjectHideFlags: 0
