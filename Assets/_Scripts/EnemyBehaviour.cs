@@ -23,7 +23,7 @@ public class EnemyBehaviour : MonoBehaviour
     private bool isDead;
 
     [SerializeField] private Transform bulletSpawn;
-    public int score = 100;
+    [SerializeField] private int score = 10;
 
     [SerializeField] private GameObject explosionPrefab;
 

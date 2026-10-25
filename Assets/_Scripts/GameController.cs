@@ -42,6 +42,9 @@ public class GameController : MonoBehaviour
         }
     }
 
+    [SerializeField] private PickupBehaviour pickupPrefab;
+    [SerializeField] private Boundary pickupIntervalRange;
+
     public static GameController Instance;
     private void Awake() { if (Instance == null) Instance = this; }
     private void OnDestroy() { if (Instance == this) Instance = null; }
@@ -63,6 +66,7 @@ public class GameController : MonoBehaviour
             enemies.Add(enemy);
             enemy.OnDied += OnEnemyDied;
         }
+        StartCoroutine(SpawnPickupRoutine());
     }
     private void Update()
     {
@@ -88,5 +92,16 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene("End");
     }
 
+    private IEnumerator SpawnPickupRoutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(pickupIntervalRange.min, pickupIntervalRange.max));
+            var pickup = Instantiate(pickupPrefab);
+            pickup.OnPickup += OnPickup;
+        }
+    }
+
     private void OnEnemyDied(int _score) => Score += _score;
+    private void OnPickup(int _score) => Score += _score;
 }

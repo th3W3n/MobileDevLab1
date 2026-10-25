@@ -8,7 +8,8 @@ public enum AudioName
     //SFX underneath
     SHOOT,
     EXPLODE,
-    BUTTON
+    BUTTON,
+    PICKUP
 }
 
 public class SoundManager : MonoBehaviour

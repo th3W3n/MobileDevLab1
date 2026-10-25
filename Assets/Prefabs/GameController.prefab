@@ -46,5 +46,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameController
   scoreLabel: {fileID: 0}
   livesLabel: {fileID: 0}
-  screenLabel: {fileID: 0}
-  lives: 3
+  player: {fileID: 0}
+  respawnDelay: 1
+  gameOverDelay: 1.5
+  startLives: 3
+  enemyPrefab: {fileID: 0}
+  enemyNum: 3
+  pickupPrefab: {fileID: 8367479661123153419, guid: fe5569e68a770a94589def65b0708202, type: 3}
+  pickupIntervalRange:
+    min: 3
+    max: 5
