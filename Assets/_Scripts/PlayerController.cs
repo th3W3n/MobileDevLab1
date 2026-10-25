@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 spawnPos;
     private bool isDead;
 
+    [SerializeField] private GameObject explosion;
+
+    private void Awake() => explosion.SetActive(false);
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -39,7 +42,10 @@ public class PlayerController : MonoBehaviour
         CheckBounds();
 
         if (!isDead && Time.frameCount % frameDelay == 0)
+        {
             BulletManager.Instance.GetBullet(bulletSpawn.position, BulletType.Player);
+            SoundManager.Instance.PlaySfx(AudioName.SHOOT);
+        }
     }
 
     private float GetTouchDir()
@@ -73,6 +79,8 @@ public class PlayerController : MonoBehaviour
         col.enabled = false;
         rb.linearVelocity = Vector2.zero;
         sr.enabled = false;
+        SoundManager.Instance.PlaySfx(AudioName.EXPLODE);
+        explosion.SetActive(true);
         OnDied?.Invoke();
     }
     public void Respawn()
@@ -80,7 +88,6 @@ public class PlayerController : MonoBehaviour
         rb.position = spawnPos;
         rb.linearVelocity = Vector2.zero;
         sr.enabled = true;
-        isDead = false;
         StartCoroutine(InvincibleRoutine());
     }
     private IEnumerator InvincibleRoutine()
@@ -93,5 +100,7 @@ public class PlayerController : MonoBehaviour
         }
         sr.enabled = true;
         col.enabled = true;
+        explosion.SetActive(false);
+        isDead = false;
     }
 }

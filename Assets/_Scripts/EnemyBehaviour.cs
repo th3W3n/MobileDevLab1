@@ -25,6 +25,8 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] private Transform bulletSpawn;
     public int score = 100;
 
+    [SerializeField] private GameObject explosionPrefab;
+
     private void Start()
     {
         randomSpeed = UnityEngine.Random.Range(speedRange.min, speedRange.max);
@@ -56,7 +58,10 @@ public class EnemyBehaviour : MonoBehaviour
     private void FixedUpdate()
     {
         if (!isDead && Time.frameCount % frameDelay == 0)
+        {
             BulletManager.Instance.GetBullet(bulletSpawn.position, BulletType.Enemy);
+            SoundManager.Instance.PlaySfx(AudioName.SHOOT);
+        }
     }
 
     public event Action<int> OnDied;
@@ -65,8 +70,10 @@ public class EnemyBehaviour : MonoBehaviour
         if (isDead) return;
         isDead = true;
         col.enabled = false;
-        SetAlpha(0.2f);
+        SetAlpha(0.5f);
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         transform.position = new Vector2(0f, spawnYPos);
+        SoundManager.Instance.PlaySfx(AudioName.EXPLODE);
         OnDied?.Invoke(score);
         StartCoroutine(MoveToBattlePos());
     }
